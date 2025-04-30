@@ -7,7 +7,7 @@ import Footer from "@/components/footer";
 const App = () => {
 
   return (
-    <div className="w-full overflow-x-hidden">
+    <div className="w-full overflow-x-hidden flex flex-col items-center">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

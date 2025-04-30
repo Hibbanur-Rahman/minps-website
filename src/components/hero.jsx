@@ -41,9 +41,9 @@ const Hero = () => {
       {/* Hero Section with Curved Right Side */}
       <div className="relative  max-w-7xl mx-auto rounded-xl overflow-hidden h-[500px]">
         {/* Hero Content */}
-        <div className="container mx-auto relative z-[2] w-full h-full">
-          {/* <div className="w-full h-full">
-            <Swiper
+        <div className="container mx-auto relative z-[0] w-full h-full bg-white">
+          <div className="w-full h-full">
+            {/* <Swiper
               spaceBetween={30}
               centeredSlides={true}
               autoplay={{
@@ -59,7 +59,10 @@ const Hero = () => {
             >
               {slides.map((slide, index) => (
                 <SwiperSlide key={index}>
-                  <div className="slide-content pb-12 h-full bg-cover" style={{backgroundImage:`url(${slide.image})`}}>
+                  <div
+                    className="slide-content pb-12 h-full bg-cover"
+                    style={{ backgroundImage: `url(${slide.image})` }}
+                  >
                     <h1 className="text-5xl font-bold mb-6">
                       <span className="text-[#3e4095]">{slide.title}</span>
                     </h1>
@@ -72,36 +75,40 @@ const Hero = () => {
                   </div>
                 </SwiperSlide>
               ))}
-            </Swiper>
-          </div> */}
+            </Swiper> */}
+          </div>
         </div>
         {/* Curved Shape Element */}
-        <div className="w-8/12 bg-[#e9e9e9] h-full absolute left-0 top-0 rounded-br-3xl overflow-hidden"></div>
-        <div className="w-3/12 bg-[#e9e9e9] h-full absolute right-[107px] top-0 overflow-hidden"></div>
-        <div className="w-1/12 bg-[#e9e9e9] h-[90%] absolute right-0 top-0 rounded-r-3xl overflow-hidden"></div>
-        <div className="absolute bottom-0 right-0 bg-white rounded-tl-3xl h-[50px] w-4/12 overflow-hidden"></div>
+        <div className="w-full h-full absolute z-[10] top-0">
+          <div className="w-8/12 bg-[#e9e9e9] h-full absolute left-0 top-0 rounded-br-3xl rounded-l-3xl z-[11] overflow-hidden border-t border-b border-s">
+          </div>
+          
+          <div className="w-3/12 bg-[#e9e9e9] h-full absolute right-[107px] top-0 overflow-hidden border-t border-b"></div>
+          <div className="w-1/12 bg-[#e9e9e9] h-[90%] absolute right-0 top-0 rounded-r-3xl overflow-hidden border-b border-e border-t"></div>
+          <div className="absolute bottom-0 right-0 bg-white rounded-tl-3xl h-[50px] w-4/12 overflow-hidden"></div>
+        </div>
       </div>
 
       {/* Notice Board Section */}
-      <div className="relative py-8 px-4 max-w-7xl mx-auto rounded-xl my-4 mt-[30px]">
+      <div className="relative py-8 px-4 max-w-7xl mx-auto rounded-xl my-4 mt-[30px] z-[20]">
         <div className="container mx-auto max-w-6xl relative z-[10]">
           {/* NOTICE BOARD Header */}
-          <div className="flex justify-end mb-4">
-            <h2 className="text-4xl font-extralight  text-[#a02b2d]">
+          <div className="flex justify-end mb-4 relative mt-[-60px]">
+            <h2 className="text-4xl font-extralight italic  text-[#a02b2d]">
               NOTICE
               <br />
               <span className="font-bold">BOARD</span>
             </h2>
           </div>
 
-          <div className="bg-[#b3e0db] p-6 rounded-lg">
+          <div className="bg-[#D8EAE8] p-6 rounded-lg inset-shadow-sm inset-shadow-[#72AFA8]">
             <div className="grid md:grid-cols-2 gap-6">
               {/* Upcoming Events */}
               <div className="bg-white rounded-lg overflow-hidden">
                 <div className="bg-[#a02b2d] text-white text-center py-3">
                   <h3 className="text-2xl font-medium">Upcoming EVENTS</h3>
                 </div>
-                <div className="p-6 space-y-6">
+                <div className="p-6 space-y-6 shadow-sidebar-ring">
                   {/* Event 1 */}
                   <div className="text-center">
                     <h4 className="text-[#3e4095] text-2xl font-semibold">
@@ -180,7 +187,7 @@ const Hero = () => {
           <div className="w-full bg-[#fff] h-[30px] absolute  top-[-30px] z-[2] right-[-0px] rounded-br-3xl"></div>
           <div className="w-[100px] absolute bg-[#ecd2d3] h-[30px] top-[-20px] right-0"></div>
         </div>
-        <div className="w-[32%] bg-[#ecd2d3] h-[109%] absolute right-0 top-[-51px] rounded-r-3xl rounded-tl-3xl"></div>
+        <div className="w-[32%] bg-[#ecd2d3] h-[110%] absolute right-0 top-[-51px] rounded-r-3xl rounded-tl-3xl"></div>
       </div>
     </div>
   );
