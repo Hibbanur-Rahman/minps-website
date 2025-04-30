@@ -6,23 +6,22 @@ const Footer = () => {
   return (
     <footer className="w-full ">
       <div
-      className="relative pb-2"
-      style={{
-        background: 'linear-gradient(to bottom, #fff 0%, #fff 50%, #a02b2d 50%, #a02b2d 100%)',
-      }}
+        className="relative pb-2"
+        style={{
+          background:
+            "linear-gradient(to bottom, #fff 0%, #fff 50%, #a02b2d 50%, #a02b2d 100%)",
+        }}
       >
         {/* Main Footer */}
         <div className="bg-[#3E4095] text-white rounded-3xl py-10 w-11/12 max-w-7xl mx-auto ">
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex justify-between">
               {/* Logo and Address */}
-              <div className="flex flex-col items-center text-center">
+              <div className="flex flex-col items-center justify-center text-center">
                 <div className="w-32 h-32 relative mb-4">
                   <img
                     src={logoImg}
                     alt="MINPS Logo"
-                    width={128}
-                    height={128}
                     className="object-contain"
                   />
                 </div>
