@@ -10,7 +10,7 @@ const App = () => {
   return (
     <div className="w-full overflow-x-hidden flex flex-col items-center">
       <Navbar />
-      <div className="max-w-7xl">
+      <div className="max-w-7xl md:w-11/12">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/events" element={<Events />} />

@@ -30,16 +30,16 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="w-full flex justify-center items-center h-36">
-      <div className="max-w-7xl w-full flex justify-between items-center">
-        <div className="flex-shrink-0">
-          <img src={logo} alt="School logo" className="w-48" />
+    <nav className="w-full flex justify-center items-center md:h-36">
+      <div className="max-w-7xl w-full flex flex-col md:flex-row justify-between items-center md:px-0 px-6">
+        <div className="flex-shrink-0 md:w-auto ">
+          <img src={logo} alt="School logo" className="w-full md:w-48" />
         </div>
         
         <div className="flex flex-col space-y-3">
-          <div className="flex items-center gap-5 w-full justify-between">
+          <div className="flex md:flex-row flex-col items-center gap-5 w-full justify-between">
             {/* Contact Info Card */}
-            <div className="rounded-full bg-gray-300 flex items-center p-2 gap-4 pr-4">
+            <div className="rounded-full bg-gray-300 flex items-center p-2 gap-4 pr-4 md:w-auto w-full">
               <div className="p-2 rounded-full bg-red-800 flex-shrink-0">
                 <PhoneCall className="text-white" size={30} />
               </div>
