@@ -5,17 +5,18 @@ import Home from "./views/home";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import Events from "./views/event";
-import About from "./views/about"
+import About from "./views/about";
 const App = () => {
-
   return (
     <div className="w-full overflow-x-hidden flex flex-col items-center">
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/events" element={<Events />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
+      <div className="max-w-7xl">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </div>
       <Footer />
       <Toaster
         position="top-center"

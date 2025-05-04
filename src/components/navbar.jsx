@@ -1,13 +1,14 @@
 import React from "react";
 import logo from "@/assets/images/logo.png";
 import { PhoneCall, User } from "lucide-react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const NavItem = ({ title, path, currentPath }) => {
   const isActive = currentPath === path;
+  const navigate=useNavigate();
   
   return (
-    <div className={`group hover:bg-indigo-800 hover:text-white border border-indigo-800 rounded-full px-4 py-1 cursor-pointer transition-colors duration-200 ${isActive ? "bg-indigo-800" : ""}`}>
+    <div className={`group hover:bg-indigo-800 hover:text-white border border-indigo-800 rounded-full px-4 py-1 cursor-pointer transition-colors duration-200 ${isActive ? "bg-indigo-800" : ""}`} onClick={()=>navigate(`${path}`)}>
       <p className={`text-sm transition-colors duration-200 ${isActive ? "text-white" : "text-indigo-800/60 group-hover:text-white"}`}>
         {title}
       </p>

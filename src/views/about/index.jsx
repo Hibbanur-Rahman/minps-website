@@ -4,9 +4,9 @@ import mobileBanner from "@/assets/images/about/bannerMobile.svg"; // Mobile ban
 
 const AboutPage = () => {
   return (
-    <div className="bg-white text-gray-800 sm:px-4">
+    <div className="bg-white text-gray-800 ">
       {/* Hero Section */}
-      <div className="relative w-full  sm:px-12">
+      <div className="relative w-full ">
         {/* Mobile Banner */}
         <img
           src={mobileBanner}
@@ -23,7 +23,7 @@ const AboutPage = () => {
       </div>
 
       {/* About Section */}
-      <section className="px-4 md:px-16 py-10 space-y-8">
+      <section className="px-4 md:px-0 py-10 space-y-8">
         <div>
           <h2 className="text-[#A02B2D] text-xl md:text-2xl font-bold mb-2">
             ABOUT US

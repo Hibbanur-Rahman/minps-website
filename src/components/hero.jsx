@@ -15,8 +15,10 @@ import SlideImg6 from "@/assets/images/slide-img-6.jpg";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate=useNavigate();
   const [slides] = useState([
     {
       title: "Shaping Healthcare Professionals, Transforming Lives.",
@@ -174,11 +176,11 @@ const Hero = () => {
 
             {/* All Events Button */}
             <div className="flex justify-center mt-8">
-              <a href="/events">
-                <Button className="bg-[#3e4095] hover:bg-[#3e4095]/90 text-white px-12 py-6 rounded-full text-xl">
+              <div>
+                <Button className="bg-[#3e4095] hover:bg-[#3e4095]/90 text-white px-12 py-6 rounded-full text-xl cursor-pointer" onClick={()=>navigate('/events')}>
                   ALL EVENTS
                 </Button>
-              </a>
+              </div>
             </div>
           </div>
         </div>

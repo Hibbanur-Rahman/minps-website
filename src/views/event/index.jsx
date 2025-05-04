@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import bannerMobile from "@/assets/images/event/bannerMobile.svg";
-import bannerDesktop from "@/assets/images/event/bannerDesktop.svg"
-// import event1 from "@/assets/images/images.jfif";
+import bannerDesktop from "@/assets/images/event/bannerDesktop.svg";
+import event1 from "@/assets/images/images.jfif";
 const Event = () => {
   const events = [
     {
@@ -56,8 +56,11 @@ const Event = () => {
     },
   ];
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
-    <div className="px-4 lg:px-16 bg-white min-h-screen pt-10">
+    <div className=" bg-white min-h-screen pt-10">
       {/* Hero Section */}
       <div className="relative w-full h-[302px]">
         {/* Mobile banner */}
@@ -76,7 +79,7 @@ const Event = () => {
       </div>
 
       {/* Events Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-8 px-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-8 ">
         {events.map((event, index) => (
           <div
             key={index}
