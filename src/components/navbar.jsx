@@ -31,7 +31,7 @@ const Navbar = () => {
 
   return (
     <nav className="w-full flex justify-center items-center md:h-36">
-      <div className="max-w-7xl w-full flex flex-col md:flex-row justify-between items-center md:px-0 px-6">
+      <div className="max-w-7xl md:w-11/12 w-full flex flex-col md:flex-row justify-between items-center md:px-0 px-6">
         <div className="flex-shrink-0 md:w-auto ">
           <img src={logo} alt="School logo" className="w-full md:w-48" />
         </div>
