@@ -4,6 +4,8 @@ import { Toaster } from "react-hot-toast";
 import Home from "./views/home";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import Events from "./views/event";
+import About from "./views/about"
 const App = () => {
 
   return (
@@ -11,6 +13,8 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/events" element={<Events />} />
+        <Route path="/about" element={<About />} />
       </Routes>
       <Footer />
       <Toaster
