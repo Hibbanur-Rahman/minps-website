@@ -6,6 +6,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import Events from "./views/event";
 import About from "./views/about";
+import DirectorsMessage from "./views/directorsMessage";
 const App = () => {
   return (
     <div className="w-full overflow-x-hidden flex flex-col items-center">
@@ -15,6 +16,8 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/events" element={<Events />} />
           <Route path="/about" element={<About />} />
+          <Route path="/directorsmessage" element={<DirectorsMessage />} />
+
         </Routes>
       </div>
       <Footer />
