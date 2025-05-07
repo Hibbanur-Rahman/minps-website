@@ -34,7 +34,7 @@ const NavItem = ({ title, path, currentPath, submenu }) => {
       <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
         <DropdownMenuTrigger asChild>
           <div
-            className={`group hover:bg-indigo-800 border border-indigo-800 rounded-full px-4 py-1 cursor-pointer transition-colors duration-200 ${
+            className={`group hover:hover:!bg-[#A02B2D] hover:text-white border border-indigo-800 hover:!border-[#A02B2D] rounded-full px-4 py-1 cursor-pointer transition-colors duration-200 ${
               isActive ? "bg-indigo-800" : ""
             }`}
             onClick={() => navigate(`${path}`)}
@@ -67,7 +67,7 @@ const NavItem = ({ title, path, currentPath, submenu }) => {
     </div>
   ) : (
     <div
-      className={`group hover:bg-indigo-800 hover:text-white border border-indigo-800 rounded-full px-4 py-1 cursor-pointer transition-colors duration-200 ${
+      className={`group hover:hover:!bg-[#A02B2D] hover:text-white border border-indigo-800 hover:!border-[#A02B2D] rounded-full px-4 py-1 cursor-pointer transition-colors duration-200 ${
         isActive ? "bg-indigo-800" : ""
       }`}
       onClick={() => navigate(`${path}`)}

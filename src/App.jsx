@@ -11,6 +11,7 @@ import BscNursingPage from "./views/courses/course-details/BscNursingPage";
 import Faculty from "./views/faculty";
 import PrincipleMessage from "./views/about/principleMessage";
 import ChairmanMessage from "./views/about/chairmanMessage";
+import Course from "./views/courses";
 const App = () => {
   return (
     <div className="w-full overflow-x-hidden flex flex-col items-center">
@@ -25,6 +26,7 @@ const App = () => {
           <Route path="/faculty" element={<Faculty />} />
           <Route path="/principleMessage" element={<PrincipleMessage />} />
           <Route path="/chairmanMessage" element={<ChairmanMessage />} />
+          <Route path="/course" element={<Course />} />
         </Routes>
       </div>
       <Footer />
