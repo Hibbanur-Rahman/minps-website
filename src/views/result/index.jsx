@@ -19,7 +19,7 @@ const Result = () => {
       </div>
 
       {/* result Cards */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-12 space-y-6">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-0 py-12 space-y-6">
         {/* Card 1 */}
         <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 bg-[#BDDDD9] rounded-2xl p-2 shadow-sm">
           <div className="bg-[#3E4095] w-32 h-32 flex items-center justify-center rounded-lg">
