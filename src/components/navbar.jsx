@@ -197,7 +197,7 @@ const Navbar = () => {
         },
         {
           title: "Examination  Result",
-          path: "/student/examination-result",
+          path: "/result",
         },
         {
           title: "Campus Life",

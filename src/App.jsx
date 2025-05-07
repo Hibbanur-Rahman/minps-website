@@ -9,6 +9,7 @@ import About from "./views/about";
 import DirectorsMessage from "./views/about/directorsMessage";
 import BscNursingPage from "./views/courses/course-details/BscNursingPage";
 import Faculty from "./views/faculty";
+import Result from "./views/result";
 import PrincipleMessage from "./views/about/principleMessage";
 import ChairmanMessage from "./views/about/chairmanMessage";
 import Course from "./views/courses";
@@ -27,6 +28,7 @@ const App = () => {
           <Route path="/principleMessage" element={<PrincipleMessage />} />
           <Route path="/chairmanMessage" element={<ChairmanMessage />} />
           <Route path="/course" element={<Course />} />
+          <Route path="/result" element={<Result/>} />
         </Routes>
       </div>
       <Footer />
