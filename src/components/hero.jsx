@@ -4,12 +4,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 //images
-import SlideImg1 from "@/assets/images/slide-img-1.jpg";
+import SlideImg1 from "@/assets/images/slide-img-1.png";
 import SlideImg2 from "@/assets/images/slide-img-2.jpeg";
 import SlideImg3 from "@/assets/images/slide-img-3.jpg";
 import SlideImg4 from "@/assets/images/slide-img-4.jpg";
 import SlideImg5 from "@/assets/images/slide-img-5.jpg";
 import SlideImg6 from "@/assets/images/slide-img-6.jpg";
+import bgNotice from "@/assets/images/notice-background.png";
 
 // Import Swiper styles
 import "swiper/css";
@@ -18,7 +19,7 @@ import "swiper/css/pagination";
 import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
-  const navigate=useNavigate();
+  const navigate = useNavigate();
   const [slides] = useState([
     {
       title: "Shaping Healthcare Professionals, Transforming Lives.",
@@ -45,7 +46,7 @@ const Hero = () => {
         {/* Hero Content */}
         <div className="container mx-auto relative z-[0] w-full h-full bg-white">
           <div className="w-full h-full">
-            {/* <Swiper
+            <Swiper
               spaceBetween={30}
               centeredSlides={true}
               autoplay={{
@@ -59,43 +60,45 @@ const Hero = () => {
               modules={[Autoplay, Pagination, Navigation]}
               className="mySwiper h-full"
             >
-              {slides.map((slide, index) => (
-                <SwiperSlide key={index}>
-                  <div
-                    className="slide-content pb-12 h-full bg-cover"
-                    style={{ backgroundImage: `url(${slide.image})` }}
-                  >
-                    <h1 className="text-5xl font-bold mb-6">
-                      <span className="text-[#3e4095]">{slide.title}</span>
+              <SwiperSlide>
+                <div className="relative">
+                  <img
+                    src={SlideImg1}
+                    alt=""
+                    className="w-full h-auto object-cover"
+                  />
+                  <div className="absolute inset-0 flex items-end justify-start p-12">
+                    <h1 className="text-[#646464] italic text-3xl md:text-4xl font-semibold leading-tight">
+                      Shaping{" "}
+                      <span className="text-[#3E4095] font-bold">
+                        Healthcare Professionals
+                      </span>
+                      ,<br />
+                      Transforming{" "}
+                      <span className="text-[#3E4095] font-bold">Lives.</span>
                     </h1>
-                    <p className="text-xl text-gray-600 mb-6">
-                      {slide.description}
-                    </p>
-                    <Button className="bg-[#3e4095] hover:bg-[#3e4095]/90 text-white px-8 py-4 rounded-full text-lg">
-                      Learn More
-                    </Button>
                   </div>
-                </SwiperSlide>
-              ))}
-            </Swiper> */}
+                </div>
+              </SwiperSlide>
+            </Swiper>
           </div>
         </div>
         {/* Curved Shape Element */}
-        <div className="w-full h-full absolute z-[10] top-0">
+        {/* <div className="w-full h-full absolute z-[10] top-0">
           <div className="w-8/12 bg-[#e9e9e9] h-full absolute left-0 top-0 rounded-br-3xl rounded-l-3xl z-[11] overflow-hidden border-t border-b border-s">
           </div>
           
           <div className="w-3/12 bg-[#e9e9e9] h-full absolute right-[107px] top-0 overflow-hidden border-t border-b"></div>
           <div className="w-1/12 bg-[#e9e9e9] h-[90%] absolute right-0 top-0 rounded-r-3xl overflow-hidden border-b border-e border-t"></div>
           <div className="absolute bottom-0 right-0 bg-white rounded-tl-3xl h-[50px] w-4/12 overflow-hidden"></div>
-        </div>
+        </div> */}
       </div>
 
       {/* Notice Board Section */}
-      <div className="relative py-8 px-4 max-w-7xl mx-auto rounded-xl my-4 mt-[30px] z-[20]">
-        <div className="container mx-auto max-w-6xl relative z-[10]">
+      <div className="relative flex justify-center max-w-7xl mx-auto rounded-xl my-4 mt-[-40px] z-[20]">
+        <div className="container mx-auto max-w-6xl absolute z-[10] py-8 px-4 ">
           {/* NOTICE BOARD Header */}
-          <div className="flex justify-end mb-4 relative mt-[-60px]">
+          <div className="flex justify-end mb-4 mr-4 relative mt-[-60px]">
             <h2 className="text-4xl font-extralight italic  text-[#a02b2d]">
               NOTICE
               <br />
@@ -175,21 +178,27 @@ const Hero = () => {
             </div>
 
             {/* All Events Button */}
-            <div className="flex justify-center mt-8">
-              <div>
-                <Button className="bg-[#3e4095] hover:bg-[#3e4095]/90 text-white px-12 py-6 rounded-full text-xl cursor-pointer" onClick={()=>navigate('/events')}>
-                  ALL EVENTS
-                </Button>
-              </div>
+          </div>
+          <div className="flex justify-center mt-8">
+            <div>
+              <Button
+                className="bg-[#3e4095] hover:bg-[#3e4095]/90 text-white px-12 py-6 rounded-full text-xl cursor-pointer"
+                onClick={() => navigate("/events")}
+              >
+                ALL EVENTS
+              </Button>
             </div>
           </div>
         </div>
         {/**background design */}
-        <div className="w-[68%] bg-[#ecd2d3] h-full absolute left-0 top-0 rounded-l-3xl">
+        <div className="h-[580px] w-full  top-[-60px] relative">
+          <img src={bgNotice} alt="" className="h-full w-full" />
+        </div>
+        {/* <div className="w-[68%] bg-[#ecd2d3] h-full absolute left-0 top-0 rounded-l-3xl">
           <div className="w-full bg-[#fff] h-[30px] absolute  top-[-30px] z-[2] right-[-0px] rounded-br-3xl"></div>
           <div className="w-[100px] absolute bg-[#ecd2d3] h-[30px] top-[-20px] right-0"></div>
         </div>
-        <div className="w-[32%] bg-[#ecd2d3] h-[110%] absolute right-0 top-[-51px] rounded-r-3xl rounded-tl-3xl"></div>
+        <div className="w-[32%] bg-[#ecd2d3] h-[110%] absolute right-0 top-[-51px] rounded-r-3xl rounded-tl-3xl"></div> */}
       </div>
     </div>
   );
