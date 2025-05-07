@@ -54,7 +54,7 @@ const NavItem = ({ title, path, currentPath, submenu }) => {
           {submenu.map((item) => (
             <DropdownMenuItem
               key={item.path}
-              className="cursor-pointer bg-indigo-800 hover:!bg-[#A02B2D] text-white hover:text-white my-1 rounded-full p-2 px-4 shadow-lg"
+              className="cursor-pointer bg-indigo-800 hover:!bg-[#A02B2D] border-1 border-[#FFFFFF] text-white hover:text-white my-1 rounded-full p-2 px-4 shadow-lg"
               onClick={() => navigate(item.path)}
             >
               <div className="flex items-center justify-center w-full">
