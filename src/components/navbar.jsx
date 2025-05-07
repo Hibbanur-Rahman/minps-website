@@ -103,7 +103,7 @@ const Navbar = () => {
         },
         {
           title: "Director Message",
-          path: "/about/director-message",
+          path: "/directorsmessage",
         },
         {
           title: "Principal Message",
