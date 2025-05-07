@@ -20,7 +20,7 @@ const FacultySection = () => {
       </div>
 
       {/* Intro Text */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-12 space-y-2 text-justify text-sm sm:text-base">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-0 py-12 space-y-2 text-justify text-sm sm:text-base">
         <h2 className="text-xl sm:text-2xl font-bold text-[#3C3D93] uppercase">
           Team of 150+ Experienced and Dedicated Faculty
         </h2>
