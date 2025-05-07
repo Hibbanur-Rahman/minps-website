@@ -10,7 +10,8 @@ import { HiBadgeCheck } from "react-icons/hi";
 import courseBgImg from "@/assets/images/course-bg.svg";
 import { RiDoubleQuotesL } from "react-icons/ri";
 import { RiDoubleQuotesR } from "react-icons/ri";
-import dummyProfileImg from '@/assets/images/dummy-profile-img.png'
+import dummyProfileImg from "@/assets/images/dummy-profile-img.png";
+import collegeimg from "@/assets/images/collegeimg.png";
 const Home = () => {
   return (
     <div className="w-full max-w-7xl ">
@@ -86,7 +87,13 @@ const Home = () => {
             dynamic medical field.
           </p>
         </div>
-        <div className="rounded-2xl bg-white h-[300px] w-4/12"></div>
+        <div className="rounded-2xl bg-white h-[300px] w-4/12 relative">
+          <img
+            src={collegeimg}
+            alt=""
+            className="absolute h-full rounded-lg object-cover"
+          />
+        </div>
       </div>
 
       {/** why choose minps */}
@@ -270,7 +277,11 @@ const Home = () => {
         </div>
         <div className="max-w-4xl mx-auto relative mt-[80px]">
           {/* Quote marks */}
-          <RiDoubleQuotesL className="absolute top-[-48px]" color="#3E4095" size={90} />
+          <RiDoubleQuotesL
+            className="absolute top-[-48px]"
+            color="#3E4095"
+            size={90}
+          />
 
           <div className="border border-[#3E4095] rounded-3xl relative flex flex-col justify-center items-center">
             <div className="flex flex-col items-center mt-[-50px]">
@@ -304,7 +315,11 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <RiDoubleQuotesR className="absolute bottom-0 right-0" color="#3E4095" size={90}/>
+          <RiDoubleQuotesR
+            className="absolute bottom-0 right-0"
+            color="#3E4095"
+            size={90}
+          />
           {/* Pagination dots */}
           <div className="flex justify-center gap-2 mt-8">
             <div className="w-2 h-2 rounded-full bg-[#3E4095]"></div>
