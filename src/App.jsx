@@ -9,6 +9,7 @@ import About from "./views/about";
 import DirectorsMessage from "./views/directorsMessage";
 import BscNursingPage from "./views/courses/course-details/BscNursingPage";
 import Faculty from "./views/faculty";
+import Result from "./views/result";
 const App = () => {
   return (
     <div className="w-full overflow-x-hidden flex flex-col items-center">
@@ -21,6 +22,8 @@ const App = () => {
           <Route path="/directorsmessage" element={<DirectorsMessage />} />
           <Route path="/bscnursing" element={<BscNursingPage/>} />
           <Route path="/faculty" element={<Faculty/>} />
+          <Route path="/result" element={<Result/>} />
+
 
 
         </Routes>
