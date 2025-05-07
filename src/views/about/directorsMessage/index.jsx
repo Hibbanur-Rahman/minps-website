@@ -38,7 +38,7 @@ const DirectorsMessage = () => {
       </div>
 
       {/* Content Section */}
-      <section className="px-4 md:px-16 py-10">
+      <section className="px-4 md:px-0 py-10">
         <div className="flex flex-col md:flex-row items-start gap-10">
           {/* Text Content */}
           <div className="md:w-2/3 space-y-2 text-sm md:text-sm text-gray-800 leading-relaxed text-justify">
@@ -106,22 +106,20 @@ const DirectorsMessage = () => {
             </p>
           </div>
 
-         {/* Director Image */}
-<div className="w-full md:w-1/3 flex justify-center md:justify-end relative">
-  <div className="relative w-[220px] sm:w-[240px] md:w-[280px] h-[320px] sm:h-[360px] md:h-[440px] flex justify-center items-center md:items-end">
-    
-    {/* Background Circle */}
-    <div className="w-[200px] sm:w-[200px] md:w-[300px] h-[200px] sm:h-[240px] md:h-[300px] bg-[#A02B2D] rounded-full absolute top-10 sm:top-8 left-1/2 -translate-x-1/2 z-0"></div>
+          {/* Director Image */}
+          <div className="w-full md:w-1/3 flex justify-center md:justify-end relative">
+            <div className="relative w-[220px] sm:w-[240px] md:w-[280px] h-[320px] sm:h-[360px] md:h-auto flex justify-center items-center md:items-end">
+              {/* Background Circle */}
+              <div className="w-[200px] sm:w-[200px] md:w-[300px] h-[200px] sm:h-[240px] md:h-[300px] bg-[#A02B2D] rounded-full absolute top-10 sm:top-40 left-1/2 -translate-x-1/2 z-0"></div>
 
-    {/* Director Image */}
-    <img
-      src={directorPhoto}
-      alt="Asif Ahmad"
-      className="w-[180px] sm:w-[200px] md:w-[260px] relative z-10 mt-24 sm:mt-28 md:mt-36 md:top-18 object-cover rounded-lg"
-    />
-  </div>
-</div>
-
+              {/* Director Image */}
+              <img
+                src={directorPhoto}
+                alt="Asif Ahmad"
+                className="w-[180px] sm:w-[200px] md:w-[360px] relative z-10 mt-24 sm:mt-28 md:mt-36 md:bottom-[-40px] object-cover rounded-lg"
+              />
+            </div>
+          </div>
         </div>
       </section>
     </div>

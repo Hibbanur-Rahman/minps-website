@@ -99,7 +99,7 @@ const Navbar = () => {
         },
         {
           title: "Chairman Message",
-          path: "/about/chairman-message",
+          path: "/chairmanMessage",
         },
         {
           title: "Director Message",
@@ -107,7 +107,7 @@ const Navbar = () => {
         },
         {
           title: "Principal Message",
-          path: "/about/principal-message",
+          path: "/principleMessage",
         },
         {
           title: "About University (BUHS)",
