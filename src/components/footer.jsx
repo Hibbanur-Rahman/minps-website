@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="w-full ">
+    <footer className="w-full">
       <div
         className="relative pb-2"
         style={{
@@ -13,11 +13,11 @@ const Footer = () => {
         }}
       >
         {/* Main Footer */}
-        <div className="bg-[#3E4095] text-white rounded-3xl py-10 w-11/12 max-w-7xl mx-auto ">
+        <div className="bg-[#3E4095] text-white rounded-3xl py-10 w-11/12 max-w-7xl mx-auto">
           <div className="container mx-auto px-4 md:px-6">
-            <div className="flex justify-between">
+            <div className="flex flex-col md:flex-row flex-wrap justify-center md:justify-between gap-10 md:gap-0">
               {/* Logo and Address */}
-              <div className="flex flex-col items-center justify-center text-center">
+              <div className="flex flex-col items-center md:items-start text-center md:text-left">
                 <div className="w-32 h-32 relative mb-4">
                   <img
                     src={logoImg}
@@ -33,8 +33,8 @@ const Footer = () => {
                 </p>
               </div>
 
-              {/* Vertical Divider - Hidden on Mobile */}
-              <div className="hidden md:flex w-[2px] bg-white/40 h-[150px] mx-auto my-auto"></div>
+              {/* Divider */}
+              <div className="hidden md:flex w-[2px] bg-white/40 h-[150px] my-auto" />
 
               {/* Contact Us */}
               <div className="text-center md:text-left">
@@ -59,8 +59,8 @@ const Footer = () => {
                 </div>
               </div>
 
-              {/* Vertical Divider - Hidden on Mobile */}
-              <div className="hidden md:flex w-[2px] bg-white/40 h-[150px] mx-auto my-auto"></div>
+              {/* Divider */}
+              <div className="hidden md:flex w-[2px] bg-white/40 h-[150px] my-auto" />
 
               {/* Links */}
               <div className="text-center md:text-left">
@@ -69,35 +69,35 @@ const Footer = () => {
                 </h3>
                 <ul className="space-y-2">
                   <li>
-                    <Link href="/anti-ragging" className="hover:underline">
+                    <Link to="/anti-ragging" className="hover:underline">
                       Anti Ragging
                     </Link>
                   </li>
                   <li>
-                    <Link href="/women-grievance" className="hover:underline">
+                    <Link to="/women-grievance" className="hover:underline">
                       Women Grievance Cell
                     </Link>
                   </li>
                   <li>
-                    <Link href="/student-grievance" className="hover:underline">
+                    <Link to="/student-grievance" className="hover:underline">
                       Student Grievance Cell
                     </Link>
                   </li>
                   <li>
-                    <Link href="/academic-calendar" className="hover:underline">
+                    <Link to="/academic-calendar" className="hover:underline">
                       Academic Calendar
                     </Link>
                   </li>
                   <li>
-                    <Link href="/e-cell" className="hover:underline">
+                    <Link to="/e-cell" className="hover:underline">
                       E-Cell
                     </Link>
                   </li>
                 </ul>
               </div>
 
-              {/* Vertical Divider - Hidden on Mobile */}
-              <div className="hidden md:flex w-[2px] bg-white/40 h-[150px] mx-auto my-auto"></div>
+              {/* Divider */}
+              <div className="hidden md:flex w-[2px] bg-white/40 h-[150px] my-auto" />
 
               {/* Social Media */}
               <div className="text-center md:text-left">
@@ -149,7 +149,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Copyright Bar */}
+      {/* Copyright */}
       <p className="bg-[#a02b2d] text-white py-4 text-center text-sm">
         © copyright {new Date().getFullYear()} | all rights reserved | MINPS
       </p>

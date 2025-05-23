@@ -2,7 +2,7 @@ import { Button } from "./ui/button";
 import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
-
+import MobileHero from "./MobileHero";
 //images
 import SlideImg1 from "@/assets/images/slide-img-1.png";
 import SlideImg2 from "@/assets/images/slide-img-2.jpeg";
@@ -38,167 +38,170 @@ const Hero = () => {
       image: SlideImg3,
     },
   ]);
-
+  const EventItem = ({ title, date }) => (
+    <div className="text-center">
+      <h4 className="text-[#3e4095] text-lg font-semibold">{title}</h4>
+      <p className="text-[#3e4095] text-sm">{date}</p>
+      <div className="flex items-center justify-center mt-2">
+        <div className="h-1 w-1 rounded-full bg-[#a02b2d]"></div>
+        <div className="h-0.5 w-40 bg-[#a02b2d] mx-2"></div>
+        <div className="h-1 w-1 rounded-full bg-[#a02b2d]"></div>
+      </div>
+    </div>
+  );
   return (
-    <div className="w-full">
-      {/* Hero Section with Curved Right Side */}
-      <div className="relative  max-w-7xl mx-auto rounded-xl overflow-hidden h-[500px]">
-        {/* Hero Content */}
-        <div className="container mx-auto relative z-[0] w-full h-full bg-white">
-          <div className="w-full h-full">
-            <Swiper
-              spaceBetween={30}
-              centeredSlides={true}
-              autoplay={{
-                delay: 5000,
-                disableOnInteraction: false,
-              }}
-              pagination={{
-                clickable: true,
-              }}
-              navigation={true}
-              modules={[Autoplay, Pagination, Navigation]}
-              className="mySwiper h-full"
-            >
-              <SwiperSlide>
-                <div className="relative">
-                  <img
-                    src={SlideImg1}
-                    alt=""
-                    className="w-full h-auto object-cover"
-                  />
-                  <div className="absolute inset-0 flex items-end justify-start p-12">
-                    <h1 className="text-[#646464] italic text-3xl md:text-4xl font-semibold leading-tight">
-                      Shaping{" "}
-                      <span className="text-[#3E4095] font-bold">
-                        Healthcare Professionals
-                      </span>
-                      ,<br />
-                      Transforming{" "}
-                      <span className="text-[#3E4095] font-bold">Lives.</span>
-                    </h1>
+    <div className="w-auto  ">
+      <div className="hidden md:block">
+        {/* Hero Section with Curved Right Side */}
+        <div className="relative  max-w-7xl mx-auto rounded-xl overflow-hidden h-[500px]">
+          {/* Hero Content */}
+          <div className="container mx-auto relative z-[0] w-full h-full bg-white">
+            <div className="w-full h-full">
+              <Swiper
+                spaceBetween={30}
+                centeredSlides={true}
+                autoplay={{
+                  delay: 5000,
+                  disableOnInteraction: false,
+                }}
+                pagination={{
+                  clickable: true,
+                }}
+                navigation={true}
+                modules={[Autoplay, Pagination, Navigation]}
+                className="mySwiper h-full"
+              >
+                <SwiperSlide>
+                  <div className="relative">
+                    <img
+                      src={SlideImg1}
+                      alt=""
+                      className="w-full h-[500px] sm:h-[400px] xs:h-[300px] object-cover"
+                    />
+                    <div className="absolute inset-0 flex items-end justify-start p-12 sm:p-6 xs:p-4">
+                      <h1 className="text-[#646464] italic text-3xl md:text-4xl sm:text-2xl xs:text-xl font-semibold leading-tight">
+                        Shaping{" "}
+                        <span className="text-[#3E4095] font-bold">
+                          Healthcare Professionals
+                        </span>
+                        ,<br />
+                        Transforming{" "}
+                        <span className="text-[#3E4095] font-bold">Lives.</span>
+                      </h1>
+                    </div>
                   </div>
-                </div>
-              </SwiperSlide>
-            </Swiper>
+                </SwiperSlide>
+              </Swiper>
+            </div>
           </div>
         </div>
-        {/* Curved Shape Element */}
-        {/* <div className="w-full h-full absolute z-[10] top-0">
-          <div className="w-8/12 bg-[#e9e9e9] h-full absolute left-0 top-0 rounded-br-3xl rounded-l-3xl z-[11] overflow-hidden border-t border-b border-s">
+
+        {/* Notice Board Section */}
+        <div className="relative flex justify-center max-w-7xl mx-auto rounded-xl my-4 mt-[-40px] z-[20]">
+          <div className="container mx-auto max-w-6xl absolute z-[10] py-8 px-4 ">
+            {/* NOTICE BOARD Header */}
+            <div className="flex justify-end mb-4 mr-4 relative mt-[-60px]">
+              <h2 className="text-4xl font-extralight italic  text-[#a02b2d]">
+                NOTICE
+                <br />
+                <span className="font-bold">BOARD</span>
+              </h2>
+            </div>
+
+            <div className="bg-[#D8EAE8] p-6 rounded-lg inset-shadow-sm inset-shadow-[#72AFA8]">
+              <div className="grid md:grid-cols-2 gap-6">
+                {/* Upcoming Events */}
+                <div className="bg-white rounded-lg overflow-hidden">
+                  <div className="bg-[#a02b2d] text-white text-center py-3">
+                    <h3 className="text-2xl font-medium">Upcoming EVENTS</h3>
+                  </div>
+                  <div className="p-6 space-y-6 shadow-sidebar-ring">
+                    {/* Event 1 */}
+                    <div className="text-center">
+                      <h4 className="text-[#3e4095] text-2xl font-semibold">
+                        Fresher Party 2025
+                      </h4>
+                      <p className="text-[#3e4095] text-lg">25 MAY 2025</p>
+                      <div className="flex items-center justify-center mt-2">
+                        <div className="h-2 w-2 rounded-full bg-[#a02b2d]"></div>
+                        <div className="h-0.5 w-64 bg-[#a02b2d]"></div>
+                        <div className="h-2 w-2 rounded-full bg-[#a02b2d]"></div>
+                      </div>
+                    </div>
+
+                    {/* Event 2 */}
+                    <div className="text-center">
+                      <h4 className="text-[#3e4095] text-2xl font-semibold">
+                        Fresher Party 2025
+                      </h4>
+                      <p className="text-[#3e4095] text-lg">25 MAY 2025</p>
+                      <div className="flex items-center justify-center mt-2">
+                        <div className="h-2 w-2 rounded-full bg-[#a02b2d]"></div>
+                        <div className="h-0.5 w-64 bg-[#a02b2d]"></div>
+                        <div className="h-2 w-2 rounded-full bg-[#a02b2d]"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Recent Events */}
+                <div className="bg-white rounded-lg overflow-hidden">
+                  <div className="bg-[#a02b2d] text-white text-center py-3">
+                    <h3 className="text-2xl font-medium">Recent EVENTS</h3>
+                  </div>
+                  <div className="p-6 space-y-6">
+                    {/* Event 1 */}
+                    <div className="text-center">
+                      <h4 className="text-[#3e4095] text-2xl font-semibold">
+                        Fresher Party 2025
+                      </h4>
+                      <p className="text-[#3e4095] text-lg">25 MAY 2025</p>
+                      <div className="flex items-center justify-center mt-2">
+                        <div className="h-2 w-2 rounded-full bg-[#a02b2d]"></div>
+                        <div className="h-0.5 w-64 bg-[#a02b2d]"></div>
+                        <div className="h-2 w-2 rounded-full bg-[#a02b2d]"></div>
+                      </div>
+                    </div>
+
+                    {/* Event 2 */}
+                    <div className="text-center">
+                      <h4 className="text-[#3e4095] text-2xl font-semibold">
+                        Fresher Party 2025
+                      </h4>
+                      <p className="text-[#3e4095] text-lg">25 MAY 2025</p>
+                      <div className="flex items-center justify-center mt-2">
+                        <div className="h-2 w-2 rounded-full bg-[#a02b2d]"></div>
+                        <div className="h-0.5 w-64 bg-[#a02b2d]"></div>
+                        <div className="h-2 w-2 rounded-full bg-[#a02b2d]"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* All Events Button */}
+            </div>
+            <div className="flex justify-center mt-8">
+              <div>
+                <Button
+                  className="bg-[#3e4095] hover:bg-[#3e4095]/90 text-white px-12 py-6 rounded-full text-xl cursor-pointer"
+                  onClick={() => navigate("/events")}
+                >
+                  ALL EVENTS
+                </Button>
+              </div>
+            </div>
           </div>
-          
-          <div className="w-3/12 bg-[#e9e9e9] h-full absolute right-[107px] top-0 overflow-hidden border-t border-b"></div>
-          <div className="w-1/12 bg-[#e9e9e9] h-[90%] absolute right-0 top-0 rounded-r-3xl overflow-hidden border-b border-e border-t"></div>
-          <div className="absolute bottom-0 right-0 bg-white rounded-tl-3xl h-[50px] w-4/12 overflow-hidden"></div>
-        </div> */}
+          {/**background design */}
+          <div className="h-[580px] w-full  top-[-60px] relative">
+            <img src={bgNotice} alt="" className="h-full w-full" />
+          </div>
+        </div>
       </div>
 
-      {/* Notice Board Section */}
-      <div className="relative flex justify-center max-w-7xl mx-auto rounded-xl my-4 mt-[-40px] z-[20]">
-        <div className="container mx-auto max-w-6xl absolute z-[10] py-8 px-4 ">
-          {/* NOTICE BOARD Header */}
-          <div className="flex justify-end mb-4 mr-4 relative mt-[-60px]">
-            <h2 className="text-4xl font-extralight italic  text-[#a02b2d]">
-              NOTICE
-              <br />
-              <span className="font-bold">BOARD</span>
-            </h2>
-          </div>
-
-          <div className="bg-[#D8EAE8] p-6 rounded-lg inset-shadow-sm inset-shadow-[#72AFA8]">
-            <div className="grid md:grid-cols-2 gap-6">
-              {/* Upcoming Events */}
-              <div className="bg-white rounded-lg overflow-hidden">
-                <div className="bg-[#a02b2d] text-white text-center py-3">
-                  <h3 className="text-2xl font-medium">Upcoming EVENTS</h3>
-                </div>
-                <div className="p-6 space-y-6 shadow-sidebar-ring">
-                  {/* Event 1 */}
-                  <div className="text-center">
-                    <h4 className="text-[#3e4095] text-2xl font-semibold">
-                      Fresher Party 2025
-                    </h4>
-                    <p className="text-[#3e4095] text-lg">25 MAY 2025</p>
-                    <div className="flex items-center justify-center mt-2">
-                      <div className="h-2 w-2 rounded-full bg-[#a02b2d]"></div>
-                      <div className="h-0.5 w-64 bg-[#a02b2d]"></div>
-                      <div className="h-2 w-2 rounded-full bg-[#a02b2d]"></div>
-                    </div>
-                  </div>
-
-                  {/* Event 2 */}
-                  <div className="text-center">
-                    <h4 className="text-[#3e4095] text-2xl font-semibold">
-                      Fresher Party 2025
-                    </h4>
-                    <p className="text-[#3e4095] text-lg">25 MAY 2025</p>
-                    <div className="flex items-center justify-center mt-2">
-                      <div className="h-2 w-2 rounded-full bg-[#a02b2d]"></div>
-                      <div className="h-0.5 w-64 bg-[#a02b2d]"></div>
-                      <div className="h-2 w-2 rounded-full bg-[#a02b2d]"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Recent Events */}
-              <div className="bg-white rounded-lg overflow-hidden">
-                <div className="bg-[#a02b2d] text-white text-center py-3">
-                  <h3 className="text-2xl font-medium">Recent EVENTS</h3>
-                </div>
-                <div className="p-6 space-y-6">
-                  {/* Event 1 */}
-                  <div className="text-center">
-                    <h4 className="text-[#3e4095] text-2xl font-semibold">
-                      Fresher Party 2025
-                    </h4>
-                    <p className="text-[#3e4095] text-lg">25 MAY 2025</p>
-                    <div className="flex items-center justify-center mt-2">
-                      <div className="h-2 w-2 rounded-full bg-[#a02b2d]"></div>
-                      <div className="h-0.5 w-64 bg-[#a02b2d]"></div>
-                      <div className="h-2 w-2 rounded-full bg-[#a02b2d]"></div>
-                    </div>
-                  </div>
-
-                  {/* Event 2 */}
-                  <div className="text-center">
-                    <h4 className="text-[#3e4095] text-2xl font-semibold">
-                      Fresher Party 2025
-                    </h4>
-                    <p className="text-[#3e4095] text-lg">25 MAY 2025</p>
-                    <div className="flex items-center justify-center mt-2">
-                      <div className="h-2 w-2 rounded-full bg-[#a02b2d]"></div>
-                      <div className="h-0.5 w-64 bg-[#a02b2d]"></div>
-                      <div className="h-2 w-2 rounded-full bg-[#a02b2d]"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* All Events Button */}
-          </div>
-          <div className="flex justify-center mt-8">
-            <div>
-              <Button
-                className="bg-[#3e4095] hover:bg-[#3e4095]/90 text-white px-12 py-6 rounded-full text-xl cursor-pointer"
-                onClick={() => navigate("/events")}
-              >
-                ALL EVENTS
-              </Button>
-            </div>
-          </div>
-        </div>
-        {/**background design */}
-        <div className="h-[580px] w-full  top-[-60px] relative">
-          <img src={bgNotice} alt="" className="h-full w-full" />
-        </div>
-        {/* <div className="w-[68%] bg-[#ecd2d3] h-full absolute left-0 top-0 rounded-l-3xl">
-          <div className="w-full bg-[#fff] h-[30px] absolute  top-[-30px] z-[2] right-[-0px] rounded-br-3xl"></div>
-          <div className="w-[100px] absolute bg-[#ecd2d3] h-[30px] top-[-20px] right-0"></div>
-        </div>
-        <div className="w-[32%] bg-[#ecd2d3] h-[110%] absolute right-0 top-[-51px] rounded-r-3xl rounded-tl-3xl"></div> */}
+      {/* 📱 Mobile View */}
+      <div className="block md:hidden w-full max-w-7xl mx-auto px-4 md:px-6 ">
+        <MobileHero />
       </div>
     </div>
   );
