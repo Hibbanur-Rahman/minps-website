@@ -27,7 +27,7 @@ const MobileHero = () => {
   );
 
   return (
-    <div className="max-w-sm px-12 py-12">
+    <div className=" py-12">
       {/* Hero Section */}
       <div className="relative max-w-sm mx-auto rounded-lg overflow-hidden mb-4">
         {/* Hero Content */}
