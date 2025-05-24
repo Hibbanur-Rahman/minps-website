@@ -1,4 +1,5 @@
-import BannerImg from "@/assets/images/courses/course-banner.png";
+import bannerDesktop from "@/assets/images/courses/bannerDesktop.png";
+import bannerMobile from "@/assets/images/courses/bannerMobile.png";
 import { Tabs, TabsContent, TabsTrigger } from "@/components/ui/tabs";
 import { TabsList } from "@radix-ui/react-tabs";
 import courseImg1 from "@/assets/images/courses/course-img-1.png";
@@ -10,19 +11,27 @@ const Course = () => {
   return (
     <div className="w-full">
       {/* Banner section */}
-      <div className="relative mt-4 sm:mt-8">
-        <div className="h-[150px] sm:h-[200px] md:h-[250px] relative w-full rounded-3xl overflow-hidden">
-          <div className="bg-[#A02B2D]/70 w-full h-full z-[2] absolute flex items-center justify-center">
-            <h2 className="text-2xl sm:text-3xl md:text-5xl text-white font-bold italic mb-2 text-center font-[Poppins]">
-              Courses
-            </h2>
-          </div>
-          <img
-            src={BannerImg || "/placeholder.svg"}
-            alt="Courses Banner"
-            className="w-full h-full object-cover"
-          />
-        </div>
+      {/* Desktop Banner */}
+      <div className="relative w-full hidden sm:block p-4 mt-4">
+        <img
+          src={bannerDesktop}
+          alt="Faculty Banner"
+          className="w-full h-auto object-cover rounded-lg"
+        />
+        <h1 className="absolute italic inset-0 flex items-center justify-center text-white text-6xl  font-bold">
+          COURSES
+        </h1>
+      </div>
+      {/* mobile banner */}
+      <div className="relative w-full block sm:hidden p-2 mt-4">
+        <img
+          src={bannerMobile}
+          alt="Faculty Banner"
+          className="w-full h-auto object-cover rounded-lg"
+        />
+        <h1 className="absolute italic inset-0 flex items-center justify-center text-white text-5xl  font-bold">
+          COURSES
+        </h1>
       </div>
 
       {/* Content section */}
@@ -40,7 +49,7 @@ const Course = () => {
               value="paramedical"
               className=" relative cursor-pointer px-4 pt-12 sm:px-6 sm:py-3 rounded-none rounded-tl-3xl sm:rounded-t-3xl rounded-bl-none sm:rounded-bl-none text-xl sm:text-xl italic text-white sm:text-[#3E4095] font-bold md:transition-all data-[state=active]:bg-[#A02B2D] data-[state=active]:text-white w-full sm:w-auto shadow-xl " // Full width on small, auto on sm+
             >
-              PARAMEDICAL  COURSES
+              PARAMEDICAL COURSES
             </TabsTrigger>
             <TabsTrigger
               value="nursing"
