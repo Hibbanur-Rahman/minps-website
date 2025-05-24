@@ -13,6 +13,7 @@ import Result from "./views/result";
 import PrincipleMessage from "./views/about/principleMessage";
 import ChairmanMessage from "./views/about/chairmanMessage";
 import Course from "./views/courses";
+import Contact from "./views/contact";
 const App = () => {
   return (
     <div className="w-full overflow-x-hidden flex flex-col items-center">
@@ -29,6 +30,7 @@ const App = () => {
           <Route path="/chairmanMessage" element={<ChairmanMessage />} />
           <Route path="/course" element={<Course />} />
           <Route path="/result" element={<Result/>} />
+          <Route path="/contact" element={<Contact/>} />
         </Routes>
       </div>
       <Footer />
