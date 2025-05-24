@@ -62,12 +62,12 @@ const Event = () => {
   return (
     <div className="bg-white min-h-screen pt-10 px-4 sm:px-6 lg:px-8">
       {/* Hero Section */}
-      <div className="relative max-w-screen-2xl h-[250px] sm:h-[302px]">
+      <div className="relative max-w-screen-xl h-[250px] sm:h-[302px]">
         {/* Mobile banner */}
         <img
           src={bannerMobile}
           alt="Mobile Banner"
-          className="w-full h-full absolute object-cover rounded-t-3xl block sm:hidden"
+          className="w-full h-full absolute object-fit rounded-t-3xl block sm:hidden"
         />
         <h1 className="absolute italic inset-0 flex items-center justify-center text-white  text-5xl font-bold sm:hidden">
           EVENTS
