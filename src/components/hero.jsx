@@ -200,9 +200,9 @@ const Hero = () => {
       </div>
 
       {/* 📱 Mobile View */}
-      <div className="block md:hidden w-full max-w-7xl mx-auto px-4 md:px-6 ">
+      {/* <div className="block md:hidden container mx-auto px-4 max-w-screen-xl  ">
         <MobileHero />
-      </div>
+      </div> */}
     </div>
   );
 };

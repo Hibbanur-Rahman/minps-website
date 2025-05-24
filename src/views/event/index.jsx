@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import bannerMobile from "@/assets/images/event/bannerMobile.svg";
+import bannerMobile from "@/assets/images/event/bannerMobile.png";
 import bannerDesktop from "@/assets/images/event/bannerDesktop.svg";
-import event1 from "@/assets/images/images.jfif";
+import event1 from "@/assets/images/event/event-1.jpg"; // Importing the first event image
 const Event = () => {
   const events = [
     {
@@ -60,46 +60,49 @@ const Event = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className=" bg-white min-h-screen pt-10">
+    <div className="bg-white min-h-screen pt-10 px-4 sm:px-6 lg:px-8">
       {/* Hero Section */}
-      <div className="relative w-full h-[302px]">
+      <div className="relative max-w-screen-2xl h-[250px] sm:h-[302px]">
         {/* Mobile banner */}
         <img
           src={bannerMobile}
           alt="Mobile Banner"
-          className="w-full object-cover rounded-lg block sm:hidden"
+          className="w-full h-full absolute object-cover rounded-t-3xl block sm:hidden"
         />
+        <h1 className="absolute italic inset-0 flex items-center justify-center text-white  text-5xl font-bold sm:hidden">
+          EVENTS
+        </h1>
 
         {/* Desktop & Tablet banner */}
         <img
           src={bannerDesktop}
           alt="Desktop Banner"
-          className="w-full object-cover rounded-lg hidden sm:block"
+          className="w-full h-full object-fit rounded-t-3xl hidden sm:block"
         />
       </div>
 
       {/* Events Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-8 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6 mt-8 max-w-screen-xl mx-auto">
         {events.map((event, index) => (
           <div
             key={index}
-            className="border border-gray-300 rounded-lg shadow hover:shadow-md transition duration-300 overflow-hidden bg-[#D8EAE8]"
+            className="border border-[#D8EAE8] rounded-lg shadow hover:shadow-md transition duration-300 overflow-hidden bg-[#D8EAE8]"
           >
-            {/* Image with Date inside */}
-            <div className="relative p-[11px]">
+            {/* Image with Date */}
+            <div className="relative p-2">
               <img
                 src={event.image}
                 alt={`Event ${index + 1}`}
-                className="w-full h-[250px] object-cover rounded-md"
+                className="w-full h-[200px] sm:h-[250px] object-fit rounded-md"
               />
-              <div className="absolute bottom-2.5 right-2.5 text-sm bg-red-700 text-white px-2 py-1 rounded-tl-md rounded-br-md shadow-md">
+              <div className="absolute bottom-2 right-2 text-xs sm:text-sm bg-[#A02B2D] text-white px-2 py-1 rounded-tl-md rounded-br-md shadow-md">
                 {event.date}
               </div>
             </div>
 
             {/* Content */}
             <div className="px-4 pb-4">
-              <h2 className="font-semibold text-[16px] text-[#3E4095]">
+              <h2 className="font-semibold text-base text-[#3E4095]">
                 {event.title}
               </h2>
               <p className="text-sm text-gray-600 mt-2">{event.description}</p>
@@ -109,8 +112,8 @@ const Event = () => {
       </div>
 
       {/* Load More Button */}
-      <div className="text-center text-[26px]  mt-[60px] mb-[58px]">
-        <button className="bg-[#3E4095] text-white px-8 py-2 rounded-full hover:bg-blue-700 transition cursor-pointer">
+      <div className="text-center text-lg sm:text-xl mt-10 mb-14">
+        <button className="bg-[#3E4095] text-white px-6 sm:px-8 py-2 rounded-full hover:bg-blue-700 transition cursor-pointer">
           Load More...
         </button>
       </div>
